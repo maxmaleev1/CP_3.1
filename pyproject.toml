@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cp-3-1"
+version = "0.1.0"
+description = ""
+authors = ["Max Maleev <mmaleev1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "cp_3"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
