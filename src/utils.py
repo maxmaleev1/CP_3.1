@@ -38,17 +38,3 @@ def get_money(operation):
     '''Передает из файла с операциями информацию о деньгах в требуемом виде: "82771.72 руб."
     '''
     return f'{operation["operationAmount"]['amount']} {operation["operationAmount"]['currency']["name"]}'
-
-def get_main(num_operations=5):
-    '''Главная функция с заданным счетчиком количества выдаваемых денежных операций
-    '''
-    sorted_list = sorting_list_date(filtering_list(loading_file('operations.json')))
-    for operation in sorted_list:
-        if num_operations == 0:
-            break
-        print(get_data(operation['date']), operation["description"])
-        if operation["description"] != 'Открытие вклада':
-            print(get_card_inf(operation['from']) + ' -> ', end='')
-        print(get_card_inf(operation['to']))
-        print(get_money(operation) + '\n')
-        num_operations -= 1
