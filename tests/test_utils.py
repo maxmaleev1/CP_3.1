@@ -1,5 +1,5 @@
 import pytest
-from src.utils import loading_file, filtering_list, sorting_list_date, get_data, get_card_inf, get_money, get_main
+from src.utils import loading_file, filtering_list, sorting_list_date, get_data, get_card_inf, get_money
 import os
 from config import ROOT_DIR
 
